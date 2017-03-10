@@ -35,20 +35,23 @@ def most_and_least_common_type(treats):
     >>> treats4 = [{'type': 'dessert'},{'type': 'dessert'},]
     >>> treats5 = [{'type': 'dessert'},{'type': 'dessert'},{'type': 'appetizer'},{'type': 'appetizer'},{'type': 'drink'},{'type': 'drink'},]
 
-    >>> most_and_least_common_type(treats)
-    ('dessert', 'drink')
+    If the list has 3 of one type, 2 of another, and 1 of another, then
+    the normal case happens.
 
-    >>> most_and_least_common_type(treats2)
-    ('dessert', 'dessert')
- 
-    >>> most_and_least_common_type(treats3)
-    (None, None)
+        >>> most_and_least_common_type(treats)
+        ({'dessert'}, {'drink'})
 
-    >>> most_and_least_common_type(treats4)
-    ('dessert', 'dessert')
+        >>> most_and_least_common_type(treats2)
+        ({'dessert'}, {'dessert'})
 
-    >>> most_and_least_common_type(treats5)
-    (['dessert', 'appetizer', 'drink'], ['dessert', 'appetizer', 'drink'])
+        >>> most_and_least_common_type(treats3)
+        (None, None)
+
+        >>> most_and_least_common_type(treats4)
+        ({'dessert'}, {'dessert'})
+
+        >>> most_and_least_common_type(treats5)
+        ({'appetizer', 'dessert', 'drink'}, {'appetizer', 'dessert', 'drink'})
 
 
     """
