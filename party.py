@@ -27,7 +27,31 @@ def is_mel(name, email):
 
 
 def most_and_least_common_type(treats):
-    """Given list of treats, return {most, least} common types."""
+    """Given list of treats, return {most, least} common types.
+
+    >>> treats = [{'type': 'dessert'},{'type': 'dessert'},{'type': 'appetizer'},{'type': 'dessert'},{'type': 'appetizer'},{'type': 'drink'},]
+    >>> treats2 = [{'type': 'dessert'}]
+    >>> treats3 = []
+    >>> treats4 = [{'type': 'dessert'},{'type': 'dessert'},]
+    >>> treats5 = [{'type': 'dessert'},{'type': 'dessert'},{'type': 'appetizer'},{'type': 'appetizer'},{'type': 'drink'},{'type': 'drink'},]
+
+    >>> most_and_least_common_type(treats)
+    ('dessert', 'drink')
+
+    >>> most_and_least_common_type(treats2)
+    ('dessert', 'dessert')
+ 
+    >>> most_and_least_common_type(treats3)
+    (None, None)
+
+    >>> most_and_least_common_type(treats4)
+    ('dessert', 'dessert')
+
+    >>> most_and_least_common_type(treats5)
+    (['dessert', 'appetizer', 'drink'], ['dessert', 'appetizer', 'drink'])
+
+
+    """
 
     types = {}
 
@@ -127,3 +151,4 @@ if __name__ == "__main__":
     app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
     DebugToolbarExtension(app)
     app.run()
+
